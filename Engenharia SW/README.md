@@ -73,6 +73,6 @@ https://docs.google.com/presentation/d/1GMds68vXowb3h_GFtI3fwKeXJQQJjm7L-wL0BJhI
 **Atividade 5 - Diagrama de casos de uso:**
 Requisitos funcionais - Biblioteca
 
-!!
+<img src="img/Diagrama de caso de uso - Biblioteca.png">
 
 
