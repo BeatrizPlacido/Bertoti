@@ -1,6 +1,6 @@
 # Atividades - 2° Semestre 2023
 
-<h3>Atividade 1</h3>
+<h3>Atividade 1 - 11/08 e 14/08</h3>
 
 **Referência:** <br>
 "We see three critical differences between programming and software engineering: time, scale, and the trade-offs at play. On a software engineering project, engineers need to be more concerned with the passage of time and the eventual need for change. In a software engineering organization, we need to be more concerned about scale and efficiency, both for the software we produce as well as for the organization that is producing it. Finally, as software engineers, we are asked to make more complex decisions with higher-stakes outcomes, often based on imprecise estimates of time and growth."
@@ -16,5 +16,51 @@
   *
 
 **Comparativo entre plataformas - Requisitos não funcionais:**
-  * Spotify x Deezer -  Usabilidade.
+  * Google Chorme x Microsoft Edge -  Usabilidade.
   
+<h3>Atividade 2 - 18/08</h3>
+
+**10 Usability Heuristics for User Interface Design** <br>
+Link: https://www.nngroup.com/articles/ten-usability-heuristics/
+
+* Erros e um acertos de cada heurística:
+
+1. Visibility of system status <br>
+Erro:<br>
+Acerto:<br>
+
+2. Match between system and the real world<br>
+Erro:<br>
+Acerto:<br>
+
+3. User control and freedom<br>
+Erro:<br>
+Acerto:<br> 
+
+4. Consistency and standards<br>
+Erro:<br>
+Acerto:<br>
+
+5. Error prevention<br>
+Erro:<br>
+Acerto:<br>
+
+6. Recognition rather than recall<br>
+Erro:<br>
+Acerto:<br>
+
+7. Flexibility and efficiency of use<br>
+Erro:<br>
+Acerto:<br>
+
+8. Aesthetic and minimalist design<br>
+Erro:<br>
+Acerto:<br>
+
+9. Help users recognize, diagnose, and recover from errors<br>
+Erro: Erro de atualização Power BI<br>
+Acerto:<br>
+
+10. Help and documentation<br>
+Erro:<br>
+Acerto:<br>
