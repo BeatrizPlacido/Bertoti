@@ -1,4 +1,4 @@
-# Atividades - 2° Semestre 2023
+# Atividades - 2° Semestre 2023 
 
 <h3>Atividade 1 - 11/08 e 14/08</h3>
 
