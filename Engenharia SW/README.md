@@ -11,9 +11,9 @@
 **Atividade 1 - Comentário:** A programação representa grande parte da engenharia de software, porém ela também leva em conta outros fatores como tempo, escabilidade e trade-offs. A engenharia de software trabalha na busca por ferramentas que possibilitem o desenvolvimento do software da maneira mais eficiente possível considerando limitações de custo e tempo.  
 
 **Atividade 2 - Exemplos de trade-offs:**
-  * Softwares utilizados em aeronaves - usabilidade x segurança;
-  * 
-  *
+  * Softwares utilizados em aeronaves - Usabilidade x Segurança;
+  * Pacote Office - Recursos x Tempo de atualização;
+  * Sistema operacional - Segurança x Conveniência.
 
 **Atividade 3 - Comparativo entre plataformas - Requisitos não funcionais:**
   * Google Chorme x Microsoft Edge -  Usabilidade.
@@ -25,41 +25,41 @@ Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 
 **Atividade 4 - Erros e um acertos de cada heurística:**
 
-1. Visibility of system status <br>
-Erro:<br>
-Acerto:<br>
+1. Visibility of system status<br>
+Erro: <br>
+Acerto: <br>
 
 2. Match between system and the real world<br>
-Erro:<br>
-Acerto:<br>
+Erro: <br>
+Acerto: <br>
 
 3. User control and freedom<br>
-Erro:<br>
-Acerto:<br> 
+Erro: <br>
+Acerto: <br> 
 
 4. Consistency and standards<br>
-Erro:<br>
-Acerto:<br>
+Erro: Opção de excluir cards no trello que fica dentro da opção compartilhar<br>
+Acerto: <br>
 
 5. Error prevention<br>
-Erro:<br>
-Acerto:<br>
+Erro: <br>
+Acerto: Alertas de erro no código (Eclipse)<br>
 
 6. Recognition rather than recall<br>
-Erro:<br>
-Acerto:<br>
+Erro: <br>
+Acerto: <br>
 
 7. Flexibility and efficiency of use<br>
-Erro:<br>
-Acerto:<br>
+Erro: <br>
+Acerto: Atalhos pacote office <br>
 
 8. Aesthetic and minimalist design<br>
-Erro:<br>
-Acerto:<br>
+Erro: Layput Microsoft Edge<br>
+Acerto: Layout Google Chrome<br>
 
 9. Help users recognize, diagnose, and recover from errors<br>
 Erro: Erro de atualização Power BI<br>
-Acerto:<br>
+Acerto: <br>
 
 10. Help and documentation<br>
 Erro:<br>
