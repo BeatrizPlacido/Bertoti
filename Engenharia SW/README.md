@@ -26,35 +26,35 @@ Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 **Atividade 4 - Erros e um acertos de cada heurística:**
 
 1. Visibility of system status<br>
-Erro: <br>
-Acerto: <br>
+Erro: Inicialização Iphone<br>
+Acerto: Progresso de dowload de aplicativos (Play Store/App Store)<br>
 
 2. Match between system and the real world<br>
 Erro: <br>
-Acerto: <br>
+Acerto: Atualização de situação do trânsito (GoogleMaps/Waze)<br>
 
 3. User control and freedom<br>
-Erro: <br>
-Acerto: <br> 
+Erro: Transações bancárias (Pix)<br>
+Acerto: FUnção de salvar automático (Excel/Word)<br> 
 
 4. Consistency and standards<br>
 Erro: Opção de excluir cards no trello que fica dentro da opção compartilhar<br>
-Acerto: <br>
+Acerto: Opção de fechar janela representada por um x<br>
 
 5. Error prevention<br>
-Erro: <br>
+Erro: CMD (Não aponta erros no código)<br>
 Acerto: Alertas de erro no código (Eclipse)<br>
 
 6. Recognition rather than recall<br>
 Erro: <br>
-Acerto: <br>
+Acerto: Autocomplete ao digitar o CEP<br>
 
 7. Flexibility and efficiency of use<br>
-Erro: <br>
+Erro: Interface do SAP<br>
 Acerto: Atalhos pacote office <br>
 
 8. Aesthetic and minimalist design<br>
-Erro: Layput Microsoft Edge<br>
+Erro: Layout Microsoft Edge<br>
 Acerto: Layout Google Chrome<br>
 
 9. Help users recognize, diagnose, and recover from errors<br>
@@ -63,7 +63,7 @@ Acerto: <br>
 
 10. Help and documentation<br>
 Erro:<br>
-Acerto:<br>
+Acerto: Documentações de IDE's<br>
 
 <h3>Aula 4 - 21/08</h3>
 
