@@ -79,3 +79,6 @@ Requisitos funcionais - Biblioteca
 
 <img src=https://github.com/BeatrizPlacido/Bertoti/blob/main/Engenharia%20SW/Diagrama%20de%20Classe%20atualizado.PNG>
 
+**Atividade 7 - Código Java:**
+https://github.com/BeatrizPlacido/Bertoti/tree/main/Engenharia%20SW/Biblioteca
+
