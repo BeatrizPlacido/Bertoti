@@ -46,11 +46,11 @@ Erro: CMD (Não aponta erros no código)<br>
 Acerto: Alertas de erro no código (Eclipse)<br>
 
 6. Recognition rather than recall<br>
-Erro: <br>
+Erro: Interface do Linux<br>
 Acerto: Autocomplete ao digitar o CEP<br>
 
 7. Flexibility and efficiency of use<br>
-Erro: Interface do SAP<br>
+Erro: Interface do Linux<br>
 Acerto: Atalhos pacote office <br>
 
 8. Aesthetic and minimalist design<br>
@@ -59,10 +59,10 @@ Acerto: Layout Google Chrome<br>
 
 9. Help users recognize, diagnose, and recover from errors<br>
 Erro: Erro de atualização Power BI<br>
-Acerto: <br>
+Acerto: Sugestões de alteração no código (Eclipse)<br>
 
 10. Help and documentation<br>
-Erro:<br>
+Erro: <br>
 Acerto: Documentações de IDE's<br>
 
 <h3>Aula 4 - 21/08</h3>
