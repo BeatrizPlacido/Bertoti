@@ -75,4 +75,6 @@ Requisitos funcionais - Biblioteca
 
 <img src=https://github.com/BeatrizPlacido/Bertoti/blob/41adb4cee854d53337855aef85a2d74e8a4ef3b4/Engenharia%20SW/Diagrama%20de%20caso%20de%20uso%20-%20Biblioteca.PNG>
 
+**Atividade 6 - Diagrama Classe:**
+<img src=https://github.com/BeatrizPlacido/Bertoti/blob/41adb4cee854d53337855aef85a2d74e8a4ef3b4/Engenharia%20SW/Diagrama%20de%20caso%20de%20uso%20-%20Biblioteca.PNG>
 
