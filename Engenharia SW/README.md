@@ -25,6 +25,7 @@ Link: https://www.nngroup.com/articles/ten-usability-heuristics/
 
 **Atividade 4 - Erros e um acertos de cada heurística:**
 
+[Imagens dos exemplos](https://github.com/BeatrizPlacido/Bertoti/tree/main/Engenharia%20SW/Heuristicas)
 1. Visibility of system status<br>
 Erro: Inicialização Iphone<br>
 Acerto: Progresso de dowload de aplicativos (Play Store/App Store)<br>
