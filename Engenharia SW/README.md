@@ -31,11 +31,11 @@ Acerto: Progresso de dowload de aplicativos (Play Store/App Store)<br>
 
 2. Match between system and the real world<br>
 Erro: <br>
-Acerto: Atualização de situação do trânsito (GoogleMaps/Waze)<br>
+Acerto: Atualização de situação do trânsito utilizando cores (GoogleMaps/Waze)<br>
 
 3. User control and freedom<br>
 Erro: Transações bancárias (Pix)<br>
-Acerto: FUnção de salvar automático (Excel/Word)<br> 
+Acerto: Função de salvar automático (Excel/Word)<br> 
 
 4. Consistency and standards<br>
 Erro: Opção de excluir cards no trello que fica dentro da opção compartilhar<br>
@@ -46,11 +46,11 @@ Erro: CMD (Não aponta erros no código)<br>
 Acerto: Alertas de erro no código (Eclipse)<br>
 
 6. Recognition rather than recall<br>
-Erro: Interface do Linux<br>
-Acerto: Autocomplete ao digitar o CEP<br>
+Erro: Interface do SAP (ícones zero intuitivos/transações identificadas por código)<br>
+Acerto: Sugestões de pesquisa navegador<br>
 
 7. Flexibility and efficiency of use<br>
-Erro: Interface do Linux<br>
+Erro: Interface do Linux (pouco intuitiva)<br>
 Acerto: Atalhos pacote office <br>
 
 8. Aesthetic and minimalist design<br>
@@ -63,7 +63,7 @@ Acerto: Sugestões de alteração no código (Eclipse)<br>
 
 10. Help and documentation<br>
 Erro: <br>
-Acerto: Documentações de IDE's<br>
+Acerto: Suporte Microsoft (Funções do pacote office)<br>
 
 <h3>Aula 4 - 21/08</h3>
 
