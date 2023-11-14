@@ -83,3 +83,5 @@ Requisitos funcionais - Biblioteca
 **Atividade 7 - Código Java:**
 [Projeto - Biblioteca](https://github.com/BeatrizPlacido/Bertoti/tree/main/Engenharia%20SW/Biblioteca)
 
+**Atividade 8 - Testes JUnit**
+
