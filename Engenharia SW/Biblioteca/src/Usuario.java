@@ -1,11 +1,12 @@
-public class Usuario {
 
+public class Usuario {
+	
 	public String nomeAluno;
 	public String dataNascimento;
 	
-	public Usuario(String nomeAluno, String dataNascimento2) {
+	public Usuario(String nomeAluno, String dataNascimento) {
 		this.nomeAluno = nomeAluno;
-		this.dataNascimento = dataNascimento2;
+		this.dataNascimento = dataNascimento;
 	}
 	
 	public String getNome() {
@@ -24,4 +25,3 @@ public class Usuario {
 		return "Aluno [Nome: " + nomeAluno + ", Data de Nascimento: " + dataNascimento + "]";
 	}
 }
-

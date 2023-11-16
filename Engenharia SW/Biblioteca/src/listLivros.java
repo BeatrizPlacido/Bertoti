@@ -13,13 +13,8 @@ public class listLivros{
         listaDeLivros.add(livro);
     }
 
-    public List<Livro> listarLivros() {
-        return listaDeLivros;
-        
-    }
-
 	public List<Livro> getListaDeLivros() {
-		return listaDeLivros;
+		return listaDeLivros; 
 	}
 
 	public void setListaDeLivros(List<Livro> listaDeLivros) {
