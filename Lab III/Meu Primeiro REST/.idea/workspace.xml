@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0672d5d3-8036-4f4a-ad80-d0fab8a5c660" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/resources/HomeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/resources/HomeResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/resources/ProductResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-end/src/main/java/com/example/demo/resources/ProductResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/banco.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/banco.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/banco.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/banco.trace.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +115,7 @@
       <updated>1715986521204</updated>
       <workItem from="1715986522356" duration="7183000" />
       <workItem from="1715995484157" duration="776000" />
-      <workItem from="1716167192333" duration="2700000" />
+      <workItem from="1716167192333" duration="3350000" />
     </task>
     <servers />
   </component>
