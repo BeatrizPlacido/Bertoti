@@ -29,15 +29,23 @@ Fale sobre o projeto desenvolvido. Apresente a empresa parceira, o problema e a 
 Apresente brevemente as tecnologias utilizadas. Uma tecnologia por linha. Indique qual a importância de cada tecnologia para o projeto.
 
 #### Contribuições Pessoais
-Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou em tópicos.
+Como a escolha da tecnologia a ser utilizada no desenvolvimento do front-end foi atribuída ao grupo, entendemos que seria interessante trabalhar com JavaScript puro com o intuito de nos familiarizarmos com a linguagem. Durante todo o projeto atuei apenas no front-end, e contribuí em diversas tasks dando suporte aos colegas e corrigindo pequenos bugs que identificamos ao longo das sprints, porém minhas principais contribuições foram:
 
-- Desenvolver front da personalização de esquema, contendo se o campo é obrigatório, tipo de dado, nome coluna e descrição. 
+- Interface de personalização de esquema - Front-end
+  <details>
+   <summary>Detalhes</summary>
+    Conforme descrito na apresentação o projeto tinha uma divisão entre três etapas principais. Na primeira delas, nomeada como 'Landing Zone' o usuário teria a possibilidade de realizar o upload de um arquivo no formato CSV contendo as informações pertinentes para a análise. Ao realizar o upload o sistema solicita o preencimento de algumas informações referentes aos dados contidos no arquivo, como tipo de dado que cada coluna possui, descrição do conteúdo da coluna e ajuste do nome conforme as especificações do algoritmo responsável pela elaboração do arquivo yml.
+
+    Essa etapa do processo 
+  </details>
+
+  - Interface de listagem de metadatas - Front-end
   <details>
    <summary>Detalhes</summary>
    
   </details>
 
-- Desenvolver front do dashboard 
+- Dashboard - Front-end
   <details>
    <summary>Detalhes</summary>
    
