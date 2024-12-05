@@ -34,12 +34,12 @@ Como a escolha da tecnologia a ser utilizada no desenvolvimento do front-end foi
 - Interface de personalização de esquema - Front-end
   <details>
    <summary>Detalhes</summary>
-    Conforme descrito na apresentação o projeto tinha uma divisão entre três etapas principais. Na primeira delas, nomeada como 'Landing Zone' o usuário teria a possibilidade de realizar o upload de um arquivo no formato CSV contendo as informações pertinentes para a análise. Ao realizar o upload o sistema solicita o preencimento de algumas informações referentes aos dados contidos no arquivo, como tipo de dado que cada coluna possui, descrição do conteúdo da coluna e ajuste do nome conforme as especificações do algoritmo responsável pela elaboração do arquivo yml.
+    Conforme descrito na apresentação o projeto tinha uma divisão entre três etapas principais. Na primeira delas, nomeada como 'Landing Zone', o usuário teria a possibilidade de realizar o upload de um arquivo no formato CSV contendo as informações pertinentes para a análise. Ao realizar o upload o sistema solicita o preencimento de algumas informações referentes aos dados contidos no arquivo, como tipo de dado que cada coluna possui, descrição do conteúdo da coluna e ajuste do nome conforme as especificações do algoritmo responsável pela elaboração do arquivo yml.
 
     Essa etapa do processo 
   </details>
 
-  - Interface de listagem de metadatas - Front-end
+- Interface de listagem de metadatas - Front-end
   <details>
    <summary>Detalhes</summary>
    
