@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Ao final de 2023 iniciei meu estágio na área de engenharia da Quero Educação, no qual tive a oportunidade de aprofundar os conhecimentos adquiridos ao longo da minha formação através da atuação em projetos de larga escala como Quero Bolsa, Quero Pago e outros projetos internos. Essas oportunidades contribuíram para meu crescimento como desenvolvedora
+Ao final de 2023 iniciei meu estágio na área de engenharia da Quero Educação, no qual tive a oportunidade de aprofundar os conhecimentos adquiridos ao longo da minha formação através da atuação em projetos de larga escala como Quero Bolsa, Quero Pago e outros projetos internos. Essas oportunidades contribuíram para meu crescimento como desenvolvedora.
 
 ## Contatos
 * [GitHub](https://github.com/BeatrizPlacido)
@@ -21,33 +21,98 @@ Mesmo formato
 Mesmo formato
 
 ### Em 2024-1
-Fale sobre o projeto desenvolvido. Apresente a empresa parceira, o problema e a solução entregue pela equipe (mínimo de um parágrafo por item). Recomenda-se o uso de figuras (ou até mesmo vídeos) para ilustrar os principais projetos.
+O projeto foi desenvolvido em parceria com a Dom Rock, empresa especializada em soluções de tecnologia voltadas para big data, inteligência artificial e data lakes em nuvem, com foco em aumentar a produtividade e a agilidade nas operações e decisões estratégicas das organizações.
 
-[GIT](https://github.com/BeatrizPlacido/API_3SEM)
+O desafio proposto à equipe consistiu na criação de um software capaz de receber arquivos CSV e, por meio de uma interface intuitiva, permitir que o usuário realizasse o mapeamento dos dados, gerando automaticamente um arquivo YML compatível com o algoritmo utilizado no pipeline de processamento da empresa.
 
-#### Tecnologias Utilizadas
-Apresente brevemente as tecnologias utilizadas. Uma tecnologia por linha. Indique qual a importância de cada tecnologia para o projeto.
+Essa solução teve como objetivo eliminar a necessidade de conhecimento técnico específico exigido pela criação manual do arquivo YML, tornando o processo mais simples e acessível.
+
+
+[Repositório](https://github.com/BeatrizPlacido/API_3SEM)
+
+### Tecnologias Utilizadas
+
+#### Front-end
+- **HTML:** Estruturação das páginas e organização dos elementos visuais da interface.
+- **CSS:** Responsável pela aparência, estilos e layout da aplicação, garantindo usabilidade.
+- **JavaScript:** Permite interatividade e dinamismo na interface, tornando a experiência do usuário mais fluida.
+
+#### Back-end
+- **Java 8:** Linguagem base utilizada para implementar a lógica do sistema.
+- **Java Development Kit (JDK) 21:** Fornece o ambiente de desenvolvimento atualizado, com ferramentas e bibliotecas para compilar e executar o código Java.
+- **Spring Boot:** Framework que facilita a criação e configuração da aplicação back-end, agilizando o desenvolvimento.
+- **Spring JPA:** Simplifica a persistência e manipulação de dados no banco, garantindo acesso eficiente às informações.
+- **Spring Security:** Responsável por autenticação e controle de acesso, garantindo a segurança da aplicação.
+- **JWT (JSON Web Tokens):** Mecanismo de autenticação baseado em tokens, utilizado para validar sessões de usuários de forma segura.
 
 #### Contribuições Pessoais
-Como a escolha da tecnologia a ser utilizada no desenvolvimento do front-end foi atribuída ao grupo, entendemos que seria interessante trabalhar com JavaScript puro com o intuito de nos familiarizarmos com a linguagem. Durante todo o projeto atuei apenas no front-end, e contribuí em diversas tasks dando suporte aos colegas e corrigindo pequenos bugs que identificamos ao longo das sprints, porém minhas principais contribuições foram:
+Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída ao grupo, optamos por utilizar JavaScript puro, visando aprofundar nosso conhecimento e familiaridade com a linguagem. Ao longo do projeto, atuei exclusivamente no front-end, colaborando em diversas tarefas, oferecendo suporte aos colegas e corrigindo pequenos bugs identificados durante as sprints. Minhas principais contribuições concentraram-se em:
 
-- Interface de personalização de esquema - Front-end
+- **Personalização de esquema - Front-end**
   <details>
-   <summary>Detalhes</summary>
-    Conforme descrito na apresentação o projeto tinha uma divisão entre três etapas principais. Na primeira delas, nomeada como 'Landing Zone', o usuário teria a possibilidade de realizar o upload de um arquivo no formato CSV contendo as informações pertinentes para a análise. Ao realizar o upload o sistema solicita o preencimento de algumas informações referentes aos dados contidos no arquivo, como tipo de dado que cada coluna possui, descrição do conteúdo da coluna e ajuste do nome conforme as especificações do algoritmo responsável pela elaboração do arquivo yml.
+   <summary>Interface que permite realizar o mapeamento de dados do CSV.</summary>
+    O projeto foi dividido em três etapas principais seguindo a segmentação do pipeline de processamento da empresa.
 
-    Essa etapa do processo 
+    A primeira, denominada "Landing Zone", permite que o usuário faça o upload de um arquivo no formato CSV, contendo as informações necessárias para a análise. Após o envio, o sistema solicita o preenchimento de detalhes sobre os dados do arquivo, como o tipo de dado de cada coluna, a descrição do conteúdo e o ajuste dos nomes conforme as especificações do algoritmo responsável pela geração do arquivo YML.
+
+
+    * Tabela gerada de forma dinâmica com base nos dados do CSV:
+    ```js
+    function generateTable(){
+
+        let table = document.getElementById("body_dados");
+        for (let x = 0; x < dados.length; x++) {
+            let dadosTable = `
+            <tr>
+                <td class="checkbox-container"><input type="checkbox" class="checkbox-custom" id="checkbox${x}"></td>
+                <td><input type="text" class="inputs" id="input-text${x}" value="${dados[x]}"></td>
+                <td>${exampleData[x]}</td>
+                <td>
+                    <select class="inputs select-custom" id="select${x}">
+                        <option value="string">Texto</option>
+                        <option value="float">Número decimal</option>
+                        <option value="int">Número inteiro</option>
+                        <option value="boolean">Verdadeiro/Falso</option>
+                        <option value="char">Caracter Único (Ex: M ou F)</option>
+                        <option value="date">Data</option>
+                    </select>
+                </td>
+                <td><textarea name="desc" id="desc${x}" class="desc_input"></textarea></td>
+            </tr>`;
+            table.insertAdjacentHTML("afterbegin", dadosTable);
+        }
+    }
+    ```
+
+    * Request resonsável por enviar os dados da tabela para o backend:
+    ```js
+    async function sendData(allData) {
+        try{
+            let response = await api.post("/colunas", allData);
+
+            if(response.status === 201) {
+                let message = "Campos registrados com sucesso.";
+                let path = '/Front-end/media/images/success-img.gif'
+                prompt_function(message, path, 1)
+            }
+        }catch(error){
+            let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
+            let path = '/Front-end/media/images/error-img.gif'
+            prompt_function(message, path, 0)
+        }
+    }
+    ```
   </details>
 
-- Interface de listagem de metadatas - Front-end
+- **Interface de listagem de metadatas - Front-end**
   <details>
    <summary>Detalhes</summary>
    
   </details>
 
-- Dashboard - Front-end
+- **Dashboard - Front-end**
   <details>
-   <summary>Detalhes</summary>
+   <summary>Dashboard interativo de consolidação dos dados</summary>
    
   </details>
 
@@ -59,11 +124,11 @@ Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o n�
 Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
 - Detalhar como foi o aprendizado (trazendo evidências)
 
-### Em 2024-2
-Mesmo formato
-
-### Em 2025-1
-Mesmo formato
-
 ### Em 2025-2
+Mesmo formato
+
+### Em 2026-1
+Mesmo formato
+
+### Em 2026-2
 Mesmo formato
