@@ -1,32 +1,10 @@
-# Beatriz Plácido Guimarães Silva Abrahão
+# Portfólio - 3° Semestre de Banco de Dados
 
-## Introdução
-
-Ao final de 2023 iniciei meu estágio na área de engenharia da Quero Educação, no qual tive a oportunidade de aprofundar os conhecimentos adquiridos ao longo da minha formação através da atuação em projetos de larga escala como Quero Bolsa, Quero Pago e outros projetos internos. Essas oportunidades contribuíram para meu crescimento como desenvolvedora.
-
-## Contatos
-* [GitHub](https://github.com/BeatrizPlacido)
-* [LinkedIn](www.linkedin.com/in/beatrizplacido-dev)
-
-## Principais Conhecimentos
-Apresente seus principais conhecimentos. Foque nos conhecimentos que possui maior domínio e que deseja desenvolver durante sua carreira.
-
-
-## Meus Projetos
-
-### Em 2023-1
-Mesmo formato
-
-### Em 2023-2
-Mesmo formato
-
-### Em 2024-1
+### Descrição
 O projeto foi desenvolvido em parceria com a Dom Rock, empresa especializada em soluções de tecnologia voltadas para big data, inteligência artificial e data lakes em nuvem, com foco em aumentar a produtividade e a agilidade nas operações e decisões estratégicas das organizações.
-
 O desafio proposto à equipe consistiu na criação de um software capaz de receber arquivos CSV e, por meio de uma interface intuitiva, permitir que o usuário realizasse o mapeamento dos dados, gerando automaticamente um arquivo YML compatível com o algoritmo utilizado no pipeline de processamento da empresa.
 
 Essa solução teve como objetivo eliminar a necessidade de conhecimento técnico específico exigido pela criação manual do arquivo YML, tornando o processo mais simples e acessível.
-
 
 [Repositório](https://github.com/BeatrizPlacido/API_3SEM)
 
@@ -123,12 +101,3 @@ Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o n�
 #### Soft Skills
 Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
 - Detalhar como foi o aprendizado (trazendo evidências)
-
-### Em 2025-2
-Mesmo formato
-
-### Em 2026-1
-Mesmo formato
-
-### Em 2026-2
-Mesmo formato
