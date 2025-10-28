@@ -92,12 +92,101 @@ Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída 
   <details>
    <summary>Dashboard interativo de consolidação dos dados</summary>
    
+    Utilizamos a lib Chart.js para construir o dashboard para exibição das métricas gerais do sistema (metadados, usuários e empresas) e gráficos dinâmicos alimentados pela API.
+
+    A estrutura do dash foi construída no arquivo /pages/admin/homeAdmin.html e utiliza as funções implementadas no arquivo /scripts/admin/homeAdmin.js para exibir os seguintes gráficos
+
+    * Distribuição dos tipos de dado por arquivo (Float, String, Int etc.)
+
+    * Distribuição de status das colunas (Pendente, Invalidado, Validado)
+
+    * Distribuição de estágios dos arquivos dentro do pipeline definido (LandingZone, Bronze, Silver, Finalizado)
+
+
+    Abaixo segue o exemplo da implementação realizada no código para realizar a busca de dados na API
+
+   ```js
+    async function getTiposDeDados(idMetadata, idEmpresa) {
+        try{
+            let body = [idEmpresa]
+
+            let response = await api.post(`/dash/quantityTypeData/${idMetadata}`, body);
+            let dadosEmpresa = response.data;
+
+            if(response.status === 200) {
+                tipos_de_dados(dadosEmpresa)
+            }else{
+                let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
+                let path = '/Front-end/media/images/error-img.gif'
+                prompt_function(message, path)
+            }
+        }
+        catch(error){
+            let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
+            let path = '/Front-end/media/images/error-img.gif'
+            prompt_function(message, path)
+        }
+    }
+   ```
+
+    e a função utilizada para construção do gráfico com base nos dados retornados pela função acima
+
+   ```js
+
+    function tipos_de_dados(dadosEmpresa) {
+        const idCanva = Chart.getChart("myChart")
+
+        if (idCanva) {
+            idCanva.destroy();
+        }
+
+        let xValues = ["Float", "String", "Integer", "Boolean", "Char", "Date"];
+        let yValues = [dadosEmpresa.Float, dadosEmpresa.String, dadosEmpresa.Int, dadosEmpresa.Boolean, dadosEmpresa.Char, dadosEmpresa.Date];
+        let barColors = ["#08115E", "#B6CAF8", "#6188DE", "#94C2FF", "#65A2FF"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                title: {
+                    display: false,
+                    text: "TIPOS DE DADO POR METADATA"
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    }
+   ```
   </details>
 
 #### Hard Skills
-Apresente as hard skills que você utilizou/desenvolveu durante o projeto e o nível de proficiência alcançado. Exemplo: CSS - Sei fazer com autonomia
-- Detalhar como foi o aprendizado (trazendo evidências)
+* HTML5, CSS3, JavaScript - Usei no desenvolvimento frontend, criando interfaces responsivas e dinâmicas, com autonomia.
+* MySQL - Utilizei para modelagem e gerenciamento de dados relacionais, com capacidade plena de criação de queries e ajustes no banco de dados.
+* IntelliJ IDEA - Ferramenta utilizada no desenvolvimento do projeto, com alto nível de proficiência na customização do ambiente e uso de plugins.
+* Git/GitHub - Versionamento de código e trabalho em equipe, com eficiência no uso de branches, pull requests e resolução de conflitos.
+* Figma - Para prototipagem de interfaces e colaboração no design da solução, utilizando a ferramenta com eficiência.
 
 #### Soft Skills
-Apresente as soft skills que você utilizou/desenvolveu durante o projeto e em quais situações elas foram fundamentais. Exemplo: Comunicação - Precisei exercitar minhas habilidades de comunicação para viabilizar as reuniões semanais levando em conta as disponibilidades dos membros, que não cursavam as mesmas disciplinas.
-- Detalhar como foi o aprendizado (trazendo evidências)
+* Comunicação - Foi essencial para alinhar as expectativas da equipe durante as reuniões de planejamento e revisões de sprint e na resolução de conflitos relacionados a integração com o backend.
+* Trabalho em equipe - Pela forma como dividimos o time entre responsáveis pelo frontend e pelo backend além da comunicação tivemos que execitar muito a habilidade de trabalho em equipe para garantir a integração entre as entregas.
+* Organização - Mediante prazos de entrega das Sprints e as disciplinas, precisei me organizar para cumprir conforme planejado, principalmente em períodos de provas.
