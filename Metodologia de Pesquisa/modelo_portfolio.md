@@ -26,7 +26,6 @@ Essa solução teve como objetivo eliminar a necessidade de conhecimento técnic
 #### Contribuições Pessoais
 Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída ao grupo, optamos por utilizar JavaScript puro, visando aprofundar nosso conhecimento e familiaridade com a linguagem. Ao longo do projeto, atuei exclusivamente no front-end, colaborando em diversas tarefas, oferecendo suporte aos colegas e corrigindo pequenos bugs identificados durante as sprints. Minhas principais contribuições concentraram-se em:
 
-- **Personalização de esquema - Front-end**
   <details>
    <summary>Interface que permite realizar o mapeamento de dados do CSV.</summary>
     O projeto foi dividido em três etapas principais seguindo a segmentação do pipeline de processamento da empresa.
@@ -82,13 +81,11 @@ Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída 
     ```
   </details>
 
-- **Interface de listagem de metadatas - Front-end**
   <details>
    <summary>Detalhes</summary>
    
   </details>
 
-- **Dashboard - Front-end**
   <details>
    <summary>Dashboard interativo de consolidação dos dados</summary>
    
