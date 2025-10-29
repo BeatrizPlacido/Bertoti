@@ -26,155 +26,155 @@ Essa solução teve como objetivo eliminar a necessidade de conhecimento técnic
 #### Contribuições Pessoais
 Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída ao grupo, optamos por utilizar JavaScript puro, visando aprofundar nosso conhecimento e familiaridade com a linguagem. Ao longo do projeto, atuei exclusivamente no front-end, colaborando em diversas tarefas, oferecendo suporte aos colegas e corrigindo pequenos bugs identificados durante as sprints. Minhas principais contribuições concentraram-se em:
 
-  <details>
-   <summary>Interface que permite realizar o mapeamento de dados do CSV.</summary>
-    O projeto foi dividido em três etapas principais seguindo a segmentação do pipeline de processamento da empresa.
+<details>
+<summary>Interface que permite realizar o mapeamento de dados do CSV.</summary>
+O projeto foi dividido em três etapas principais seguindo a segmentação do pipeline de processamento da empresa.
 
-    A primeira, denominada "Landing Zone", permite que o usuário faça o upload de um arquivo no formato CSV, contendo as informações necessárias para a análise. Após o envio, o sistema solicita o preenchimento de detalhes sobre os dados do arquivo, como o tipo de dado de cada coluna, a descrição do conteúdo e o ajuste dos nomes conforme as especificações do algoritmo responsável pela geração do arquivo YML.
+A primeira, denominada "Landing Zone", permite que o usuário faça o upload de um arquivo no formato CSV, contendo as informações necessárias para a análise. Após o envio, o sistema solicita o preenchimento de detalhes sobre os dados do arquivo, como o tipo de dado de cada coluna, a descrição do conteúdo e o ajuste dos nomes conforme as especificações do algoritmo responsável pela geração do arquivo YML.
 
 
-    * Tabela gerada de forma dinâmica com base nos dados do CSV:
-    ```js
-    function generateTable(){
+* Tabela gerada de forma dinâmica com base nos dados do CSV:
+```js
+function generateTable(){
 
-        let table = document.getElementById("body_dados");
-        for (let x = 0; x < dados.length; x++) {
-            let dadosTable = `
-            <tr>
-                <td class="checkbox-container"><input type="checkbox" class="checkbox-custom" id="checkbox${x}"></td>
-                <td><input type="text" class="inputs" id="input-text${x}" value="${dados[x]}"></td>
-                <td>${exampleData[x]}</td>
-                <td>
-                    <select class="inputs select-custom" id="select${x}">
-                        <option value="string">Texto</option>
-                        <option value="float">Número decimal</option>
-                        <option value="int">Número inteiro</option>
-                        <option value="boolean">Verdadeiro/Falso</option>
-                        <option value="char">Caracter Único (Ex: M ou F)</option>
-                        <option value="date">Data</option>
-                    </select>
-                </td>
-                <td><textarea name="desc" id="desc${x}" class="desc_input"></textarea></td>
-            </tr>`;
-            table.insertAdjacentHTML("afterbegin", dadosTable);
-        }
+    let table = document.getElementById("body_dados");
+    for (let x = 0; x < dados.length; x++) {
+        let dadosTable = `
+        <tr>
+            <td class="checkbox-container"><input type="checkbox" class="checkbox-custom" id="checkbox${x}"></td>
+            <td><input type="text" class="inputs" id="input-text${x}" value="${dados[x]}"></td>
+            <td>${exampleData[x]}</td>
+            <td>
+                <select class="inputs select-custom" id="select${x}">
+                    <option value="string">Texto</option>
+                    <option value="float">Número decimal</option>
+                    <option value="int">Número inteiro</option>
+                    <option value="boolean">Verdadeiro/Falso</option>
+                    <option value="char">Caracter Único (Ex: M ou F)</option>
+                    <option value="date">Data</option>
+                </select>
+            </td>
+            <td><textarea name="desc" id="desc${x}" class="desc_input"></textarea></td>
+        </tr>`;
+        table.insertAdjacentHTML("afterbegin", dadosTable);
     }
-    ```
+}
+```
 
-    * Request resonsável por enviar os dados da tabela para o backend:
-    ```js
-    async function sendData(allData) {
-        try{
-            let response = await api.post("/colunas", allData);
+* Request resonsável por enviar os dados da tabela para o backend:
+```js
+async function sendData(allData) {
+    try{
+        let response = await api.post("/colunas", allData);
 
-            if(response.status === 201) {
-                let message = "Campos registrados com sucesso.";
-                let path = '/Front-end/media/images/success-img.gif'
-                prompt_function(message, path, 1)
-            }
-        }catch(error){
-            let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
-            let path = '/Front-end/media/images/error-img.gif'
-            prompt_function(message, path, 0)
+        if(response.status === 201) {
+            let message = "Campos registrados com sucesso.";
+            let path = '/Front-end/media/images/success-img.gif'
+            prompt_function(message, path, 1)
         }
+    }catch(error){
+        let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
+        let path = '/Front-end/media/images/error-img.gif'
+        prompt_function(message, path, 0)
     }
-    ```
-  </details>
+}
+```
+</details>
 
-  <details>
-   <summary>Detalhes</summary>
-   
-  </details>
+<details>
+<summary>Detalhes</summary>
 
-  <details>
-   <summary>Dashboard interativo de consolidação dos dados</summary>
-   
-    Utilizamos a lib Chart.js para construir o dashboard para exibição das métricas gerais do sistema (metadados, usuários e empresas) e gráficos dinâmicos alimentados pela API.
+</details>
 
-    A estrutura do dash foi construída no arquivo /pages/admin/homeAdmin.html e utiliza as funções implementadas no arquivo /scripts/admin/homeAdmin.js para exibir os seguintes gráficos
+<details>
+<summary>Dashboard interativo de consolidação dos dados</summary>
 
-    * Distribuição dos tipos de dado por arquivo (Float, String, Int etc.)
+Utilizamos a lib Chart.js para construir o dashboard para exibição das métricas gerais do sistema (metadados, usuários e empresas) e gráficos dinâmicos alimentados pela API.
 
-    * Distribuição de status das colunas (Pendente, Invalidado, Validado)
+A estrutura do dash foi construída no arquivo /pages/admin/homeAdmin.html e utiliza as funções implementadas no arquivo /scripts/admin/homeAdmin.js para exibir os seguintes gráficos
 
-    * Distribuição de estágios dos arquivos dentro do pipeline definido (LandingZone, Bronze, Silver, Finalizado)
+* Distribuição dos tipos de dado por arquivo (Float, String, Int etc.)
+
+* Distribuição de status das colunas (Pendente, Invalidado, Validado)
+
+* Distribuição de estágios dos arquivos dentro do pipeline definido (LandingZone, Bronze, Silver, Finalizado)
 
 
-    Abaixo segue o exemplo da implementação realizada no código para realizar a busca de dados na API
+Abaixo segue o exemplo da implementação realizada no código para realizar a busca de dados na API
 
-   ```js
-    async function getTiposDeDados(idMetadata, idEmpresa) {
-        try{
-            let body = [idEmpresa]
+```js
+async function getTiposDeDados(idMetadata, idEmpresa) {
+    try{
+        let body = [idEmpresa]
 
-            let response = await api.post(`/dash/quantityTypeData/${idMetadata}`, body);
-            let dadosEmpresa = response.data;
+        let response = await api.post(`/dash/quantityTypeData/${idMetadata}`, body);
+        let dadosEmpresa = response.data;
 
-            if(response.status === 200) {
-                tipos_de_dados(dadosEmpresa)
-            }else{
-                let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
-                let path = '/Front-end/media/images/error-img.gif'
-                prompt_function(message, path)
-            }
-        }
-        catch(error){
+        if(response.status === 200) {
+            tipos_de_dados(dadosEmpresa)
+        }else{
             let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
             let path = '/Front-end/media/images/error-img.gif'
             prompt_function(message, path)
         }
     }
-   ```
+    catch(error){
+        let message = "Alguma coisa deu errado. Tente novamente mais tarde.";
+        let path = '/Front-end/media/images/error-img.gif'
+        prompt_function(message, path)
+    }
+}
+```
 
-    e a função utilizada para construção do gráfico com base nos dados retornados pela função acima
+e a função utilizada para construção do gráfico com base nos dados retornados pela função acima
 
-   ```js
+```js
 
-    function tipos_de_dados(dadosEmpresa) {
-        const idCanva = Chart.getChart("myChart")
+function tipos_de_dados(dadosEmpresa) {
+    const idCanva = Chart.getChart("myChart")
 
-        if (idCanva) {
-            idCanva.destroy();
-        }
+    if (idCanva) {
+        idCanva.destroy();
+    }
 
-        let xValues = ["Float", "String", "Integer", "Boolean", "Char", "Date"];
-        let yValues = [dadosEmpresa.Float, dadosEmpresa.String, dadosEmpresa.Int, dadosEmpresa.Boolean, dadosEmpresa.Char, dadosEmpresa.Date];
-        let barColors = ["#08115E", "#B6CAF8", "#6188DE", "#94C2FF", "#65A2FF"];
+    let xValues = ["Float", "String", "Integer", "Boolean", "Char", "Date"];
+    let yValues = [dadosEmpresa.Float, dadosEmpresa.String, dadosEmpresa.Int, dadosEmpresa.Boolean, dadosEmpresa.Char, dadosEmpresa.Date];
+    let barColors = ["#08115E", "#B6CAF8", "#6188DE", "#94C2FF", "#65A2FF"];
 
-        new Chart("myChart", {
-            type: "bar",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            plugins: {
+                legend: { display: false }
             },
-            options: {
-                plugins: {
-                    legend: { display: false }
+            title: {
+                display: false,
+                text: "TIPOS DE DADO POR METADATA"
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    }
                 },
-                title: {
-                    display: false,
-                    text: "TIPOS DE DADO POR METADATA"
-                },
-                scales: {
-                    x: {
-                        grid: {
-                            display: false
-                        }
-                    },
-                    y: {
-                        grid: {
-                            display: false
-                        }
+                y: {
+                    grid: {
+                        display: false
                     }
                 }
             }
-        });
-    }
-   ```
-  </details>
+        }
+    });
+}
+```
+</details>
 
 #### Hard Skills
 * HTML5, CSS3, JavaScript - Usei no desenvolvimento frontend, criando interfaces responsivas e dinâmicas, com autonomia.
