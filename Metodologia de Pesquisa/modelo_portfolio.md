@@ -27,7 +27,7 @@ Essa solução teve como objetivo eliminar a necessidade de conhecimento técnic
 Como a escolha da tecnologia para o desenvolvimento do front-end foi atribuída ao grupo, optamos por utilizar JavaScript puro, visando aprofundar nosso conhecimento e familiaridade com a linguagem. Ao longo do projeto, atuei exclusivamente no front-end, colaborando em diversas tarefas, oferecendo suporte aos colegas e corrigindo pequenos bugs identificados durante as sprints. Minhas principais contribuições concentraram-se em:
 
 <details>
-<summary>Interface que permite realizar o mapeamento de dados do CSV.</summary>
+<summary>Interface para mapeamento dos dados do CSV </summary>
 O projeto foi dividido em três etapas principais seguindo a segmentação do pipeline de processamento da empresa.
 
 A primeira, denominada "Landing Zone", permite que o usuário faça o upload de um arquivo no formato CSV, contendo as informações necessárias para a análise. Após o envio, o sistema solicita o preenchimento de detalhes sobre os dados do arquivo, como o tipo de dado de cada coluna, a descrição do conteúdo e o ajuste dos nomes conforme as especificações do algoritmo responsável pela geração do arquivo YML.
@@ -82,8 +82,102 @@ async function sendData(allData) {
 </details>
 
 <details>
-<summary>Detalhes</summary>
+<summary>Interface de validação/especificação dos dados</summary>
 
+Seguindo o fluxo do pipeline mencionado, desenvolvemos uma interface para a validação dos metadados da camada anterior.
+
+Ao carregar, o sistema busca do backend todas as colunas associadas a um metadata selecionado e exibe seus dados em uma tabela interativa.
+O usuário pode marcar chaves primárias, alterar o status de validação, inserir comentários e excluir colunas.
+As ações de salvar ou deletar enviam atualizações via API (axios) para o backend, garantindo persistência dos ajustes.
+
+Tabela gerada com base nos dados recebidos do backend
+```js
+function generateTable() {
+    let titulo = document.getElementById("title");
+    titulo.innerHTML = "Visualização do metadata " + metadataName;
+
+    let table = document.getElementById("body_dados");
+    table.innerHTML = "";
+
+    for (let x = 0; x < bronzeData.length; x++) {
+        if (bronzeData[x].ativo !== false) {
+
+            let tipo = "";
+            if (bronzeData[x].tipo === "boolean") tipo = "Verdadeiro/Falso";
+            else if (bronzeData[x].tipo === "string") tipo = "Texto";
+            else if (bronzeData[x].tipo === "int") tipo = "Número Inteiro";
+            else if (bronzeData[x].tipo === "float") tipo = "Número Decimal";
+            else if (bronzeData[x].tipo === "char") tipo = "Carácter Único";
+            else tipo = "Data";
+
+            let comentarioBronze = bronzeData[x].comentario === null || bronzeData[x].comentario === "null" ? "" : bronzeData[x].comentario;
+
+            let checkboxChecked = bronzeData[x].chavePrimaria ? "checked" : "";
+
+            let dadosTable = `
+            <tr>
+                <td class="checkbox-container"><input type="checkbox" class="checkbox-custom" id="checkbox${x}" ${checkboxChecked}></td>
+                <td class="val_data">${bronzeData[x].restricao == "true" ? "SIM" : "NÃO"}</td>
+                <td class="val_data">${bronzeData[x].nome}</td>
+                <td class="val_data">${tipo}</td>
+                <td class="val_desc">${bronzeData[x].descricao}</td>
+
+                <td class="val_data">
+                    <select id="valid_select_${x}">
+                        <option value="VALIDADO" ${bronzeData[x].validado === "VALIDADO" ? "selected" : ""}>Validado</option>
+                        <option value="INVALIDADO" ${bronzeData[x].validado === "INVALIDADO" ? "selected" : ""}>Invalidado</option>
+                        <option value="PENDENTE" ${bronzeData[x].validado === "PENDENTE" ? "selected" : ""}>Pendente</option>
+                    </select>
+                </td>
+
+                <td class="val_data"><textarea id="desc${x}" class="desc_input">${comentarioBronze}</textarea></td>
+
+                <td class="btn_data">
+                    <button class="delete-btn" data-index="${x}">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </td>
+            </tr>`;
+
+            table.insertAdjacentHTML("afterbegin", dadosTable);
+        }
+    }
+}
+```
+
+Função responsável pelo envio dos dados processados para o banckend:
+```js
+async function sendData() {
+    try {
+        let dados = [];
+
+        for (let y = 0; y < bronzeData.length; y++) {
+            if (bronzeData[y].ativo !== false) {
+                dados.push({
+                    id: bronzeData[y].id,
+                    chavePrimaria: document.getElementById(`checkbox${y}`).checked,
+                    validado: document.getElementById(`valid_select_${y}`).value,
+                    comentario: document.getElementById(`desc${y}`).value,
+                });
+            }
+        }
+
+        let response = await axios.put(
+            "http://localhost:8080/colunas/update/bronze",
+            dados
+        );
+
+        if (response.status === 200) {
+            newSuccessPrompt();
+        } else {
+            alert("Um erro ocorreu no sistema, tente novamente mais tarde.");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+```
 </details>
 
 <details>
