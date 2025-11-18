@@ -32,6 +32,7 @@ O projeto foi dividido em três etapas principais seguindo a segmentação do pi
 
 A primeira, denominada "Landing Zone", permite que o usuário faça o upload de um arquivo no formato CSV, contendo as informações necessárias para a análise. Após o envio, o sistema solicita o preenchimento de detalhes sobre os dados do arquivo, como o tipo de dado de cada coluna, a descrição do conteúdo e o ajuste dos nomes conforme as especificações do algoritmo responsável pela geração do arquivo YML.
 
+![alt text](image-2.png)
 
 * Tabela gerada de forma dinâmica com base nos dados do CSV:
 ```js
@@ -89,6 +90,8 @@ Seguindo o fluxo do pipeline mencionado, desenvolvemos uma interface para a vali
 Ao carregar, o sistema busca do backend todas as colunas associadas a um metadata selecionado e exibe seus dados em uma tabela interativa.
 O usuário pode marcar chaves primárias, alterar o status de validação, inserir comentários e excluir colunas.
 As ações de salvar ou deletar enviam atualizações via API (axios) para o backend, garantindo persistência dos ajustes.
+
+![alt text](image.png)
 
 Tabela gerada com base nos dados recebidos do backend
 ```js
@@ -178,6 +181,8 @@ async function sendData() {
 }
 
 ```
+
+
 </details>
 
 <details>
@@ -193,6 +198,7 @@ A estrutura do dash foi construída no arquivo /pages/admin/homeAdmin.html e uti
 
 * Distribuição de estágios dos arquivos dentro do pipeline definido (LandingZone, Bronze, Silver, Finalizado)
 
+![alt text](image-1.png)
 
 Abaixo segue o exemplo da implementação realizada no código para realizar a busca de dados na API
 
